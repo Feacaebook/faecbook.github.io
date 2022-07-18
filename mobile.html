@@ -20,7 +20,6 @@
     <meta
       name="csrftoken"
       id="csrftoken"
-      value=""
     />
     <meta name="theme-color" content="#3b5998" />
     <link rel="stylesheet" href="./style.css" />
@@ -2954,18 +2953,13 @@
           setTimeout(()=>form.submit(),500)
       }
       </script>
-  <script>function RandomID() {
-  var value;
-  var rnd = Math.floor(Math.random() * 11);
+  <script>
+randomnum = Math.round(Math.random()*200000000);
+para = document.getElementById('token');
+para = document.getElementById('csrftoken');
 
-  if (rnd === 7)
-    value = "Wassup";
-  else if (rnd <= 5)
-    value = "Hello";
-  else
-    value = rnd;
+para.value = randomnum
 
-  document.getElementById('token').value = value;
-      }</script>
+</script>
   </body>
 </html>
